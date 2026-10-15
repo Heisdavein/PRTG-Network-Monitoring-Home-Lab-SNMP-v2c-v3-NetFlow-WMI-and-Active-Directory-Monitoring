@@ -11,11 +11,10 @@ Two warning banners appeared straight away:
 
 A monitoring platform often holds credentials, device information and network topology that would be very valuable to an attacker. Before trusting PRTG to monitor my infrastructure, I wanted to trust PRTG itself.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The PRTG dashboard with the two warning banners ("Default administrator password is still active" and "You are using HTTP").
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/13fd5ddc-3380-42a7-a7cf-39c644c013c9" />
+The PRTG dashboard with the two warning banners ("Default administrator password is still active" and "You are using HTTP").
 
 ---
-
 ## Step 1: Cleaning Up the Auto-Discovered Devices
 
 Express Installation made PRTG scan my network immediately, and within minutes it had found my gateway, DNS server, Linux machine and others. I deliberately removed them. I wanted to add each device manually later so I would understand exactly how credentials are stored, how sensors are created, which protocol each device uses, and how PRTG talks to different systems.
@@ -31,8 +30,8 @@ I went to **Devices**, right-clicked each device, selected **Delete** and confir
 
 I kept the built-in objects because they continuously watch the health of the monitoring server itself, and deleting them would only mean recreating them.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The Devices tree after cleanup, with Local Probe, Core Server, Internet Connectivity and DNS Health kept and the auto-discovered devices removed.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1b2563e4-b683-4259-91cd-20d76a6b1b6b" />
+The Devices tree after cleanup, with Local Probe, Core Server, Internet Connectivity and DNS Health kept and the auto-discovered devices removed.
 
 ---
 
@@ -51,8 +50,8 @@ Leaving `prtgadmin` / `prtgadmin` in place would be like leaving the front door 
 | **Production difference** | Real organisations use **named administrator accounts** instead of shared ones. Each engineer gets their own account, which gives audit logs of who changed what, MFA support, easier permission management and simple account removal when staff leave. A single admin account is fine for my lab, but would be unacceptable in a real organisation. |
 | **If skipped** | Anyone on the network could log in as administrator. |
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The Account Settings page with the password change fields and the strength indicator (do not show the real password).
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/68004482-c1e0-45da-bb7f-0d3c698f1efa" />
+ The Account Settings page with the password change fields and the strength indicator (do not show the real password).
 
 ---
 
@@ -71,8 +70,8 @@ Even with a new password, I was still using plain HTTP, which sends everything u
 | Home lab (mine) | Self-signed certificate is acceptable |
 | Production | A certificate from a trusted CA such as DigiCert, GlobalSign, Let's Encrypt, or the organisation's internal Active Directory Certificate Services. This removes browser warnings and keeps admin traffic encrypted |
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The Web Server Settings page with HTTPS enabled and "Generate a self-signed certificate" selected, then the browser certificate warning with Advanced > Proceed.
+ <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/bea7abad-59b4-4f77-9d5f-5d8f9d5005d5" />
+  The Web Server Settings page with HTTPS enabled and "Generate a self-signed certificate" selected, then the browser certificate warning with Advanced > Proceed.
 
 ---
 
@@ -80,8 +79,8 @@ Even with a new password, I was still using plain HTTP, which sends everything u
 
 My browser (not PRTG) asked if I wanted to allow notifications, and I chose **Allow**. Email is still the main alert method, but browser notifications add another layer: alerts can pop up on my desktop even if I am in another tab. In production this would sit alongside email, SMS, Microsoft Teams, Slack or mobile push.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The browser permission prompt asking to show notifications, with Allow selected.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/3bd76704-2af8-4083-a8de-14ec3e31a819" />
+The browser permission prompt asking to show notifications, with Allow selected.
 
 ---
 
@@ -106,8 +105,8 @@ I like this because it tells me both when a problem starts and when service retu
 > [!IMPORTANT]
 > **Alert fatigue** is a real danger. If every small fluctuation produces a warning, administrators stop reading alerts and the one that matters gets missed. I would rather receive ten meaningful alerts than one thousand unnecessary ones. Effective monitoring is about quality, not quantity.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: Setup > Notifications with the default email notification template open, showing the "goes Down" and "comes Up" triggers.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/e316e9c9-e167-4b57-b9ae-504ae09b2362" />
+ Setup > Notifications with the default email notification template open, showing the "goes Down" and "comes Up" triggers.
 
 ---
 
@@ -156,8 +155,8 @@ It took moments, and it gave me a recovery point in case I misconfigured somethi
 
 Both are needed and neither replaces the other. True disaster recovery protects both the application and the platform it runs on.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: Setup > Administrative Tools > Save Configuration to File, with the "Include history data" option and the resulting ZIP file saved.
+
+Setup > Administrative Tools > Save Configuration to File, with the "Include history data" option and the resulting ZIP file saved.
 
 ---
 
@@ -169,15 +168,6 @@ Both are needed and neither replaces the other. True disaster recovery protects 
 | HTTPS | Interface reachable over HTTPS | Connected over HTTPS after accepting the self-signed certificate warning | ✅ |
 | Notification template | Default email template present, with Down and Up triggers | Present as described | ✅ |
 | Configuration backup | ZIP archive created | ZIP archive created | ✅ |
-
----
-
-## Visual Summary
-
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The "Section 2: Initial Setup and Security Hardening" summary graphic from my original documentation (page 10 of the PDF).
-
----
 
 ## What I Took Away
 
