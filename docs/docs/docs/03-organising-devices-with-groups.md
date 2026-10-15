@@ -67,11 +67,12 @@ It looks simple, but leaves room to grow. I can add groups for wireless access p
 
 Subgroups I could add as the lab grows: Routing, Wireless, Load Balancers, WAN and VPN Appliances.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The "Add Group" dialog on Local Probe with Group Name "Network Infrastructure" and auto-discovery option.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/0c32c765-40d2-4b25-aff2-aa25ba632e09" />
+The "Add Group" dialog on Local Probe with Group Name "Network Infrastructure" and auto-discovery option.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The finished Devices tree with Network Infrastructure (and its Switching subgroup), Servers, Storage and Firewalls beneath Local Probe.
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/06430796-a55a-434f-9bd8-e45d9d1b1a48" />
+The finished Devices tree with Network Infrastructure (and its Switching subgroup), Servers, Storage and Firewalls beneath Local Probe.
 
 ---
 
@@ -102,13 +103,6 @@ Settings that can be inherited:
 | Top-level groups exist | Network Infrastructure, Servers, Storage, Firewalls | Created | ✅ |
 | Subgroup exists | Switching under Network Infrastructure | Created | ✅ |
 | Auto-discovery | Disabled for the new groups | Left disabled | ✅ |
-
----
-
-## Visual Summary
-
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The "Section 3: Organising Devices with Groups" summary graphic from my original documentation (page 14 of the PDF).
 
 ---
 
