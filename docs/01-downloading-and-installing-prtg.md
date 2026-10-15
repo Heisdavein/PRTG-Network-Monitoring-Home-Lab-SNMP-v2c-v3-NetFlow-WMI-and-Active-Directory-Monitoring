@@ -5,7 +5,6 @@
 PRTG turned out to be one of the simplest parts of this lab to install, even though it is an enterprise-grade platform. I installed it directly on my **Windows Server 2022 VM** in VMware Workstation. Keeping the whole monitoring platform inside one VM made future management, backups and updates easier.
 
 ---
-
 ## Step 1: Download the Installer
 
 1. I logged into my Windows Server VM and opened a web browser.
@@ -21,11 +20,10 @@ PRTG turned out to be one of the simplest parts of this lab to install, even tho
 > [!TIP]
 > I download software **inside the VM** whenever I can. That avoids copying large files from the host into the VM.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The Paessler PRTG download page with the "Free Download" button and the licence key shown (blur or redact the key before publishing).
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9381f307-4a5f-431e-843e-5ae9ee931c19" />
+The Paessler PRTG download page with the "Free Download" button and the licence key shown (blur or redact the key before publishing.
 
 ---
-
 ## Step 2: Run the Installer
 
 1. I double-clicked the PRTG Network Monitor installer.
@@ -35,11 +33,10 @@ PRTG turned out to be one of the simplest parts of this lab to install, even tho
 5. The installer asked for an **email address**. This becomes PRTG's primary notification account for alerts, reports and system messages. I entered mine.
 6. PRTG contacted Paessler's licensing servers to validate the licence. This took about 15 to 30 seconds.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The PRTG Setup Wizard pages for language selection, licence agreement, licence information, email address and licence validation.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/94e4104b-1283-4502-b593-98fc062a99b7" />
+The PRTG Setup Wizard pages for language selection, licence agreement, licence information, email address and licence validation.
 
 ---
-
 ## Step 3: Choose the Installation Type
 
 PRTG offered **Express** and **Custom** installation.
@@ -53,11 +50,10 @@ PRTG offered **Express** and **Custom** installation.
 
 I chose **Express Installation**. I wanted PRTG to start discovering devices straight away so I could confirm the monitoring server was talking to the rest of my lab. The installer then copied the application files, installed the Windows services, configured the built-in web server and prepared the monitoring database. This took about **3 to 10 minutes**, and PRTG created a desktop shortcut when it finished.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The "Select Installation Type" page with Express Installation selected, followed by the installing progress page and the "Completing the PRTG Network Monitor Setup Wizard" page.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/f133c0a2-1447-4398-83ef-337a74087da9" />
+The "Select Installation Type" page with Express Installation selected, followed by the installing progress page and the "Completing the PRTG Network Monitor Setup Wizard" page.
 
 ---
-
 ## Step 4: Verify the PRTG Services
 
 Before opening the web interface, I checked that PRTG's services had started. I pressed **Windows + R**, typed `services.msc` and pressed Enter.
@@ -77,11 +73,10 @@ services.msc
 > [!IMPORTANT]
 > I avoid restarting PRTG services unless I really have to. Restarting the Core Server interrupts sensor polling and can leave gaps in monitoring data, graphs and alert processing. In production I would do it in a planned maintenance window.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The Windows Services console with PRTG Core Server Service and PRTG Probe Service both showing Running and Automatic.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1203f1b2-feeb-4cad-8359-76037fb12f92" />
+The Windows Services console with PRTG Core Server Service and PRTG Probe Service both showing Running and Automatic.
 
 ---
-
 ## Step 5: Log In for the First Time
 
 I double-clicked the PRTG desktop shortcut, which opened the web console in my browser. The default credentials were:
@@ -96,8 +91,8 @@ The dashboard loaded within moments. Because I chose Express Installation, PRTG 
 > [!WARNING]
 > These default credentials are the same on every new PRTG installation. I changed them immediately. See [document 2](02-initial-setup-and-security-hardening.md).
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The PRTG login page, then the first dashboard view with auto-discovered devices appearing.
+ <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/44281f22-0cb3-4fc6-b9e8-81a763e6ef09" />
+  The PRTG login page, then the first dashboard view with auto-discovered devices appearing.
 
 ---
 
