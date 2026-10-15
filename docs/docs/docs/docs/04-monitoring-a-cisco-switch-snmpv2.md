@@ -67,11 +67,10 @@ Very little configuration was needed. The switch could now answer SNMP queries, 
 > [!WARNING]
 > Many devices ship with default community strings such as `public` and `private`. These are widely known and must never be used in production, because anyone who knows the string can query the device. In production I would also add an **SNMP access list** that only allows requests from the PRTG server's IP address, so even a discovered community string is useless from any other system.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The SSH session to the Cisco switch with the SNMP commands entered and `copy running-config startup-config` completed (redact the community string if desired).
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/f9d10fc1-a4f8-408e-a5af-ea5da76641a2" />
+The SSH session to the Cisco switch with the SNMP commands entered and `copy running-config startup-config` completed (redact the community string if desired).
 
 ---
-
 ## Step 2: Add the Switch to PRTG
 
 I navigated to **Devices → Network Infrastructure → Switching**, right-clicked and selected **Add Device**.
@@ -99,8 +98,8 @@ I navigated to **Devices → Network Infrastructure → Switching**, right-click
 
 A consistent naming convention makes devices much easier to find as the environment grows.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The "Add Device" page for DMT-SW-01 with the IP address, Cisco icon and SNMP settings (v2c, community, UDP 161, timeout 5 seconds).
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/3e1bc61c-2bc5-4596-8cb8-037f3d5601f4" />
+The "Add Device" page for DMT-SW-01 with the IP address, Cisco icon and SNMP settings (v2c, community, UDP 161, timeout 5 seconds).
 
 ---
 
@@ -118,8 +117,8 @@ I right-clicked the switch and selected **Run Auto-Discovery**. PRTG queried the
 | Interface Traffic | Traffic on every active port, one sensor per interface |
 | SSL Certificate | Certificate status |
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The Auto-Discovery results for DMT-SW-01 listing Ping, System Uptime, CPU Load, Memory, Fan Health, Interface Traffic and SSL Certificate sensors.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ebb12798-e3e3-4ce0-ae40-eb190ee74a4b" />
+The Auto-Discovery results for DMT-SW-01 listing Ping, System Uptime, CPU Load, Memory, Fan Health, Interface Traffic and SSL Certificate sensors.
 
 ---
 
@@ -129,8 +128,8 @@ I opened the **SNMP CPU Load** sensor. It showed the current CPU percentage, a 2
 
 If someone reports that "the network was slow yesterday afternoon", I can look at CPU, interface traffic, memory and uptime graphs for that exact period instead of guessing. This is objective evidence rather than opinion.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The SNMP CPU Load sensor page with the current value, the 24-hour graph and the Live Data tab.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/38620597-e38b-4d05-90a9-51546e8e6d51" />
+ The SNMP CPU Load sensor page with the current value, the 24-hour graph and the Live Data tab.
 
 ---
 
@@ -159,10 +158,6 @@ Without PRTG I would only find out about this outage when a user reported losing
 
 ---
 
-## Visual Summary
-
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The "Section 4: Monitoring a Cisco Switch with SNMP Version 2" summary graphic from my original documentation (page 19 of the PDF).
 
 ---
 
