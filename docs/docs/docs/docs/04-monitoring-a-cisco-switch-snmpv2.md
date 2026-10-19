@@ -148,16 +148,13 @@ A monitoring system is only useful if it actually detects failures, so I ran a c
 | Cable reconnected | Sensors return to green | All sensors gradually returned to green | ✅ |
 | Recovery alert | Second email on recovery | Second email received | ✅ |
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The PRTG device tree with DMT-SW-01 red/Down during the cable test (Ping and SNMP sensors Down).
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/9f33e855-bbd7-4776-beb0-335b60a7fc66" />
+The PRTG device tree with DMT-SW-01 red/Down during the cable test (Ping and SNMP sensors Down).
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The failure email and the recovery email in my inbox.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/d4420265-355a-491e-b15b-033ad49e6fe6" />
+The failure email and the recovery email in my inbox.
 
 Without PRTG I would only find out about this outage when a user reported losing connectivity. With PRTG the platform found the problem first, recorded it, alerted me and confirmed recovery. That shift from reacting after users notice to finding issues before they do is a major reason organisations invest in monitoring.
-
----
-
 
 ---
 
