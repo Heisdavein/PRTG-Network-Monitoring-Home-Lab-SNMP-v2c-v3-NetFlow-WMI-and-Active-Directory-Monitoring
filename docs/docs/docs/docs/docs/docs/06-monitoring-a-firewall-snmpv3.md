@@ -43,8 +43,8 @@ SNMP v3 separates authentication from encryption: the **authentication password*
 
 I then configured **SNMP traps**. Instead of waiting for PRTG's sixty-second poll, traps let the firewall send important events straight away. I set the trap destination to my PRTG server's IP address and saved.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The WatchGuard Firebox System > SNMP page with Version 3 selected, the snmpv3user account, SHA-1 and DES, and the trap receiver IP (do not show passwords).
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/6ec26a86-94bf-412b-b1b9-df425a28d354" />
+The WatchGuard Firebox System > SNMP page with Version 3 selected, the snmpv3user account, SHA-1 and DES, and the trap receiver IP (do not show passwords).
 
 **Concepts carry across vendors.** Whether Cisco, Palo Alto, Fortinet or WatchGuard, every platform asks for an SNMP username, authentication protocol, authentication password, encryption protocol, encryption password and the monitoring server's IP address. Those concepts are worth more than memorising any one interface.
 
@@ -68,8 +68,8 @@ I then configured **SNMP traps**. Instead of waiting for PRTG's sixty-second pol
 
 Every firewall I add to this group now inherits these credentials. If I monitored twenty firewalls and the SNMP password changed, I would update it once at the group level instead of editing twenty devices.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The Firewalls group settings > Credentials for SNMP Devices with Inherit from Parent unticked and SNMP v3 settings entered (passwords hidden).
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/960bccee-1bd0-4b3b-a7ae-937efbe61476" />
+The Firewalls group settings > Credentials for SNMP Devices with Inherit from Parent unticked and SNMP v3 settings entered (passwords hidden).
 
 ---
 
