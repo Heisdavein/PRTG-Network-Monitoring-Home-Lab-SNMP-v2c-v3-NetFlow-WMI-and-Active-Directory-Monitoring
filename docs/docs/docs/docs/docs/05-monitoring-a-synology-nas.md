@@ -39,8 +39,8 @@ Unlike the Cisco switch (command line), Synology DSM has a graphical interface.
 
 Synology makes SNMP much simpler than Cisco IOS, but the underlying protocol is exactly the same.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: Synology DSM Control Panel > Terminal & SNMP > SNMP with "Enable SNMP service" ticked, SNMPv2c selected and the community string field (redact if desired).
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/b1628b18-0eb0-44a1-93bb-1ac36da74d3b" />
+Synology DSM Control Panel > Terminal & SNMP > SNMP with "Enable SNMP service" ticked, SNMPv2c selected and the community string field (redact if desired).
 
 ---
 
@@ -60,8 +60,8 @@ Synology makes SNMP much simpler than Cisco IOS, but the underlying protocol is 
 | SNMP version | SNMP v2c |
 | Community string | `danmilltraining` |
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The Add Device page for DMT-NAS-01 in the Storage group with SNMP v2c settings.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/27b66cf0-91f3-4c57-9da2-456e528b3123" />
+The Add Device page for DMT-NAS-01 in the Storage group with SNMP v2c settings.
 
 ---
 
@@ -75,8 +75,9 @@ Instead of Auto-Discovery, I clicked **Add Sensor** and searched for "Synology",
 | **Synology Physical Disk** | For each of my **two disks**: operational status, temperature, health, read/write condition | Drives rarely fail instantly. They show warning signs first: rising temperature, changing SMART values, more read errors. Catching these lets an engineer replace a drive before users notice |
 | **Synology Logical Disk** | RAID health, available capacity, used capacity, logical volume status | Users use logical volumes, not physical disks. If the RAID degrades because of a failed disk, this sensor alerts me |
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The Add Sensor page filtered by "synology" showing the Synology-specific sensor types.
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ee4eaf7e-b21a-4764-a1f5-47e5b8c3e918" />
+The Add Sensor page filtered by "synology" showing the Synology-specific sensor types.
 
 ---
 
@@ -102,25 +103,14 @@ After a few polling cycles every sensor turned green, which told me two things: 
 | SNMP community match | No SNMP errors | No errors | ✅ |
 | Physical Disk sensor | Status, temperature and trend graphs visible | Visible | ✅ |
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The DMT-NAS-01 device page with all sensors green (Ping, System Health, both Physical Disks, Logical Disk, Memory, Traffic).
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/fbec5c11-a33f-47a9-aa26-ab504a9a5b87" />
+The DMT-NAS-01 device page with all sensors green (Ping, System Health, both Physical Disks, Logical Disk, Memory, Traffic).
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The Synology Physical Disk sensor page with the temperature history graph.
-
----
-
-## Visual Summary
-
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The "Section 5: Monitoring a Synology NAS with Manual Sensors" summary graphic from my original documentation (page 24 of the PDF).
+![Uploading image.png…]()
+The Synology Physical Disk sensor page with the temperature history graph.
 
 ---
 
 ## What I Took Away
 
 I used to think monitoring storage meant checking whether it was online. A healthy NAS is one whose disks stay cool, whose RAID is healthy, whose memory is stable and whose traffic follows expected patterns. The biggest lesson was the value of **historical data**: current status shows how a device is now, but graphs over days and weeks show whether it is getting healthier or drifting towards failure.
-
----
-
-[← Previous: Monitoring a Cisco Switch](04-monitoring-a-cisco-switch-snmpv2.md) | [Next: Monitoring a Firewall (SNMP v3) →](06-monitoring-a-firewall-snmpv3.md)
