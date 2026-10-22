@@ -160,13 +160,6 @@ During an incident the most important information now rises to the top instead o
 
 ---
 
-## Visual Summary
-
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The "Section 6: Monitoring a Firewall with SNMP Version 3" summary graphic from my original documentation (page 28 of the PDF).
-
----
-
 ## What I Took Away
 
 Monitoring is not just about visibility; it is also about **protecting the visibility itself**. SNMP v3 is more complex than v2c, but that complexity is justified for devices on the edge of the network. I also saw how credential inheritance at the group level saves enormous time as an environment grows.
