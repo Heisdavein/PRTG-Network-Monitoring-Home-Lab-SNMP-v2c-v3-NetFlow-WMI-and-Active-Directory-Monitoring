@@ -59,8 +59,8 @@ In **Credentials for Windows Systems** I disabled inheritance, because I wanted 
 | **Why does PRTG need Windows credentials?** | WMI is authenticated remote management. When PRTG asks for CPU use or Windows Update status, it is asking Windows itself, and Windows needs an account with enough permissions. |
 | **Production difference** | I used the built-in Administrator for my lab, which is not best practice. In production I would create a dedicated service account such as `svc_prtg` with only the permissions needed for monitoring (the **Principle of Least Privilege**), reducing the impact if the account is compromised. |
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The Add Device page for DMT-AD-01 in the Servers group, with the IP address, Windows Server icon and Credentials for Windows Systems (password hidden).
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/971d0b47-3492-4e7c-9a2a-7d5a34e0104b" />
+The Add Device page for DMT-AD-01 in the Servers group, with the IP address, Windows Server icon and Credentials for Windows Systems (password hidden).
 
 ---
 
@@ -72,8 +72,8 @@ In **Credentials for Windows Systems** I disabled inheritance, because I wanted 
 
 Within about one polling interval (60 seconds by default) the sensor showed processor use. Internally, PRTG queries the Windows `Win32_Processor` WMI class. The sensor shows the current CPU percentage, history graphs, minimum and maximum values, average use and sensor availability. If users say the server was slow yesterday afternoon, I can look at that exact period instead of guessing.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The WMI CPU Load sensor on DMT-AD-01 with the current value, history graph and channel list.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/166a3581-6d56-4c7a-919a-e5f62edcfadb" />
+ The WMI CPU Load sensor on DMT-AD-01 with the current value, history graph and channel list.
 
 ---
 
@@ -106,8 +106,8 @@ I ticked each one and clicked **Add Selected**. Within minutes the server had a 
 | **DNS (WMI)** | The server hosts DNS. If DNS fails, users cannot resolve names, AD authentication starts failing and many applications stop working. A healthy server with failed DNS is still a major outage | n/a |
 | **Windows Update Status** | One of the most valuable sensors for security. Missing updates often mean missing security patches. PRTG alerts me when update compliance drops below my standard | n/a |
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The Recommended Sensors list for DMT-AD-01 with the sensors ticked.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/acca819e-4926-47fb-8e28-f5c40838582d" />
+The Recommended Sensors list for DMT-AD-01 with the sensors ticked.
 
 ---
 
@@ -150,8 +150,8 @@ These do not affect monitoring, but give useful inventory information.
 
 Read-only rights mean PRTG cannot change server configuration through SNMP, and accepting packets from the PRTG server only means no other device can query the server over SNMP.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The SNMP Service Properties window with the Agent, Traps and Security tabs configured (community string and IPs visible as documented).
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1c830104-3966-4598-88a0-44466d26d062" />
+The SNMP Service Properties window with the Agent, Traps and Security tabs configured (community string and IPs visible as documented).
 
 ---
 
@@ -197,13 +197,6 @@ I added **SNMP System Uptime** to report uptime independently of WMI. It is a se
 | Recommended sensors | Added and building a health profile | Added; profile built within minutes | ✅ |
 | SNMP service configured | Read-only, limited to PRTG server IP | Configured as documented | ✅ |
 | SNMP System Uptime | Reports uptime separately from WMI | Reported from the next polling cycle | ✅ |
-
----
-
-## Visual Summary
-
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The "Section 8: Monitoring Windows Servers with WMI and SNMP" summary graphic from my original documentation (page 39 of the PDF).
 
 ---
 
