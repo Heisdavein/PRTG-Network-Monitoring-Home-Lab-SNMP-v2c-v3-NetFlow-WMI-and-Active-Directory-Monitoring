@@ -106,7 +106,8 @@ After a few polling cycles every sensor turned green, which told me two things: 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/fbec5c11-a33f-47a9-aa26-ab504a9a5b87" />
 The DMT-NAS-01 device page with all sensors green (Ping, System Health, both Physical Disks, Logical Disk, Memory, Traffic).
 
-![Uploading image.png…]()
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/b4865da9-675a-4735-8182-d49f1b423cba" />
 The Synology Physical Disk sensor page with the temperature history graph.
 
 ---
