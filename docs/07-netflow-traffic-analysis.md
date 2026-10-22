@@ -50,8 +50,9 @@ Finally I chose the interface that exports flows: the **external WAN interface**
 
 Enabling NetFlow does not noticeably affect normal firewall operation. The firewall keeps forwarding packets exactly as before and simply exports metadata about them in the background.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The WatchGuard System > NetFlow page with Version 9, the collector address, UDP port 9996, active flow timeout of 1 minute, and the WAN interface set to Ingress and Egress.
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/de13e59c-50f6-4220-b896-083c14398d98" />
+The WatchGuard System > NetFlow page with Version 9, the collector address, UDP port 9996, active flow timeout of 1 minute, and the WAN interface set to Ingress and Egress.
 
 ---
 
@@ -72,8 +73,8 @@ After I clicked **Create**, the sensor showed a waiting state until the first fl
 > [!IMPORTANT]
 > The UDP port and sender IP in PRTG must match the firewall configuration. If either is wrong, PRTG simply receives no flow data.
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The "Add Sensor: NetFlow v9" page with UDP port 9996, Sender IP, Receiving Interface and Flow Timeout filled in.
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/e5d4df24-fdbc-4da9-9ed5-0fe4391b47f4" />
+The "Add Sensor: NetFlow v9" page with UDP port 9996, Sender IP, Receiving Interface and Flow Timeout filled in.
 
 ---
 
@@ -94,8 +95,9 @@ After about a minute the sensor started receiving data. It was immediately clear
 | Top Protocols view | Protocol breakdown shown | Mostly HTTPS, HTTP and DNS | ✅ |
 | Top Talkers / Top Connections | Devices and conversations listed | Listed | ✅ |
 
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The NetFlow v9 sensor page with Top Protocols, Top Talkers, Top Connections and Live Data views, and the sensor status OK.
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/522f9916-1c77-415c-9ff3-ffad661a05df" />
+The NetFlow v9 sensor page with Top Protocols, Top Talkers, Top Connections and Live Data views, and the sensor status OK.
 
 ---
 
@@ -116,13 +118,6 @@ Imagine a user phones and says, *"The internet is really slow today."*
 | **Monitor the correct interfaces** | For internet analysis, export from the WAN interface. To analyse traffic between internal departments, monitor the uplinks on a core Layer 3 switch. The observation point matters as much as enabling NetFlow |
 | **Protect flow data** | Traditional NetFlow exports are **not encrypted**. They contain no packet payloads, but still reveal communication patterns, so keep them on trusted internal networks and never send them across the public internet without extra protection |
 | **Review trends regularly** | Looking at Top Talkers and protocol mixes each week builds a baseline, so unusual traffic is easy to spot |
-
----
-
-## Visual Summary
-
-> **📸 Screenshot Placeholder**
-> Insert screenshot showing: The "Section 7: NetFlow Traffic Analysis" summary graphic from my original documentation (page 33 of the PDF).
 
 ---
 
